@@ -1,0 +1,27 @@
+﻿@using WebApplication2.Models
+@model WebApplication2.Models.MessageModels.AssassinsMessageModel
+
+
+<h1 style="color: gold">
+    You have $ @Model.PlayerDollar and @Model.PlayerPenny penny
+</h1>
+
+<h2 style="color: gold">Someone wants to kill you.</h2>
+<h2 style="color: gold">You can try to create a contract with the Assassins' Guild</h2>
+
+
+<input name="aggre"
+       type="button"
+       style="background-color: gold"
+       value="Create contract"
+       onclick="location.href = '@Url.Action("CreateContract", "Assasins", @Model)'" />
+
+<input name="gameOver"
+       type="button"
+       style="background-color: gold"
+       value="Skip"
+       onclick="location.href = '@Url.Action("GameOver", "Player")'" />
+
+
+<img src="../../Content/Images/Assassins.jpg" style="width: 300px; height: 450px;
+                                                     margin-left: 70%; margin-right: 20%; margin-top: -15% ">

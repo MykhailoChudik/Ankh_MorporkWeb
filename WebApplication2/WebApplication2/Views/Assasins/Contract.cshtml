@@ -1,0 +1,15 @@
+﻿@using WebApplication2.Models
+@model WebApplication2.Models.MessageModels.AssassinsMessageModel
+
+<h2 style="color: gold">Create contract</h2>
+<h2 style="color: gold"> You have $ @Model.PlayerDollar and @Model.PlayerPenny penny </h2>
+
+@using (Html.BeginForm("Contract", "Assasins", @Model))
+{
+    <h3 style="color: gold">Input price in $</h3>
+    <input name="contractValue" type="number" value="" min="0" required pattern="\d" max="@Model.PlayerDollar" />
+    <input type="submit" />
+}
+
+<img src = "../../Content/Images/Assassins.jpg" style = "width: 300px; height: 450px;
+                                                        margin-left: 70%; margin-right: 20%; margin-top: -15%" >
