@@ -1,0 +1,27 @@
+﻿@using WebApplication2.Models
+@model WebApplication2.Models.MessageModels.BeerMessageModel
+
+<h2 style="color: gold">
+    You have $ @Model.PlayerDollar and @Model.PlayerPenny penny
+</h2>
+
+<h2 style="color: gold">You Meet Beer Shop</h2>
+<h2 style="color: gold">You have 1 beer</h2>
+<h2 style="color: gold">You can buy 1 beer</h2>
+
+
+<input name="aggre"
+       type="button"
+       style="background-color: gold"
+       value="Buy 1"
+       onclick="location.href = '@Url.Action("Buy1", "Beer")'" />
+
+<input name="gameOver"
+       type="button"
+       style="background-color: gold"
+       value="Skip"
+       onclick="location.href = '@Url.Action("Play", "Player")'" />
+
+
+<img src="../../Content/Images/Beer.png" style="width: 400px; height: 600px;
+                                                   margin-left: 50%; margin-right: 20%; margin-top: -15%">

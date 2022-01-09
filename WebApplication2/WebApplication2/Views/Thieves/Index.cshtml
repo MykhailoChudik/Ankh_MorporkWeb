@@ -1,0 +1,33 @@
+﻿@using WebApplication2.Models
+@model WebApplication2.Models.MessageModels.ThievesMessageModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2 style="color: gold">
+    You have $ @Model.PlayerDollar and @Model.PlayerPenny penny
+</h2>
+
+<h2 style="color: gold">You Meet Thieves</h2>
+<h2 style="color: gold">You will lose 10$</h2>
+
+
+<input name="aggre"
+       type="button"
+       style="background-color: gold"
+       value="Play"
+       onclick="location.href = '@Url.Action("Play", "Thieves")'" />
+
+
+
+<input name="gameOver"
+       type="button"
+       style="background-color: gold"
+       value="Skip"
+       onclick="location.href = '@Url.Action("GameOver", "Player")'" />
+
+
+<img src="../../Content/Images/Thieves.jpg" style="width: 400px; height: 600px;
+                                                         margin-left: 50%; margin-right: 20%; margin-top: -15%">

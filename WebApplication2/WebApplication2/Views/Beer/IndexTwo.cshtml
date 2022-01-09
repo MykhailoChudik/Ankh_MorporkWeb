@@ -1,0 +1,20 @@
+﻿@using WebApplication2.Models
+@model WebApplication2.Models.MessageModels.BeerMessageModel
+
+<h2 style="color: gold">
+    You have $ @Model.PlayerDollar and @Model.PlayerPenny penny
+</h2>
+
+<h2 style="color: gold">You Meet Beer Shop</h2>
+<h2 style="color: gold">You already have 2 beer</h2>
+<h2 style="color: gold">You can't buy more</h2>
+
+<input name="gameOver"
+       type="button"
+       style="background-color: gold"
+       value="Continue"
+       onclick="location.href = '@Url.Action("Play", "Player")'" />
+
+
+<img src="../../Content/Images/Beer.png" style="width: 400px; height: 600px;
+                                                   margin-left: 50%; margin-right: 20%; margin-top: -15%">
